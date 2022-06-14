@@ -3,6 +3,8 @@
 
 **By: Team 13** 
 
+![plot](alevision-co-x6HpdNQ-iEM-unsplash.jpg)
+
 ## Business Problem
 
 Airline companies have monetized almost every part of the travel experience, from luggage fees, to higher costs for extra legroom, to in-flight meals, all services that were once included with the price of the flight ticket. However, one service the airline companies have not yet charged are the in-flight movies and TV shows they offer to passengers. Offering digital entertainment is a small perk that keeps passengers entertained, or distracted, during the course of a flight, and almost all carriers offer a catalog of movie and pre-recorded TV options. According to Nerd Wallet, Delta Airlines, for example, can give passengers access to up to 300-movie titles, HBO, Showtime, and 12-channels of live TV.  But of the millions of possible titles to choose from, how do airline executives decide what movies and pre-recorded TV shows to offer on flights? 
@@ -74,7 +76,18 @@ Here are some of the key tools and elements of our tech stack that we will like 
 
 The discovery and development path as well as the end-user interface are displayed below. While the initial draft and final product will differ greatly in details offered based on the data uncovered throughout this process, the information offered will enable decision makers to select the best movies based on licensing cost and popularity of the movie. Additionally, the end-user will be able to adjust the findings to better fit geography, distance traveled and time-on-flight.  
 
+![plot](Picture1.jpg)
 
+![plot](Picture2.png)
 
+## Milestones
 
+We have outlined four different versions of our finished project. Version 1 is the easiest version of our project to complete, with a probability of 100%. Things will get a little bit more challenging with Version 2, with a ~70% probability of completion. We have a ~20% probability of completing project Version 3. And Version 4 will be the most challenging, but most rewarding, version of our project, with only a ~5% probability of completion. So if things go very well for this group, then Version 4 will be the ideal version to complete.
 
+* **Version 1 (100% Probability):** Build a local SQL database to store each cleaned dataset in its own table, along with a set of SQL queries to join the datasets. These datasets will be loaded into a Tableau dashboard.
+* **Version 2 (~70% Probability):** Load the uncleaned data sets into an S3 bucket. Python scripts will be triggered by cron jobs running on an EC2 instance that will clean and process the datasets and load them into a data warehouse. Tableau dashboard will pull data directly from the data warehouse via SQL queries. 
+* **Version 3 (~20% Probability):** ETL pipelines will be fully orchestrated by Apache Airflow and loaded into a Snowflake data warehouse. Front-end will be an EC2-hosted dash application that queries the data warehouse and visualizes flights and entertainment predictions for different types of passengers.
+* **Version 4 (~5% Probability):** All cleaning tasks in ETL pipeline are fully managed and run in containerized processes. Front-end Dash application is replicated and managed by a load balancer to handle users at scale. 
+
+## Concerns
+Primary concerns include: (1) Short-staffed. Our team of seven has dwindled down to a team of three and Team-13 has lost domain knowledge that can no longer be leveraged for this project. (2) It’s challenging to find a representative data set or data source with existing airline movies and pre-recorded TV catalogs. (3) Will positive findings actually increase brand loyalty or airline consumer satisfaction?  
