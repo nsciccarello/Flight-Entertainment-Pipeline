@@ -86,7 +86,7 @@ We have outlined four different versions of our finished project. Version 1 is t
 
 * **Version 1 (100% Probability):** Build a local SQL database to store each cleaned dataset in its own table, along with a set of SQL queries to join the datasets. These datasets will be loaded into a Tableau dashboard.
 * **Version 2 (~70% Probability):** Load the uncleaned data sets into an S3 bucket. Python scripts will be triggered by cron jobs running on an EC2 instance that will clean and process the datasets and load them into a data warehouse. Tableau dashboard will pull data directly from the data warehouse via SQL queries. 
-* **Version 3 (~20% Probability):** ETL pipelines will be fully orchestrated by Apache Airflow and loaded into a Snowflake data warehouse. Front-end will be an EC2-hosted dash application that queries the data warehouse and visualizes flights and entertainment predictions for different types of passengers.
+* **Version 3 (~20% Probability):** ETL pipelines will be fully orchestrated by Apache Airflow and loaded into a data warehouse on AWS Redshift. Front-end will be an EC2-hosted dash application that queries the data warehouse and visualizes flights and entertainment predictions for different types of passengers.
 * **Version 4 (~5% Probability):** All cleaning tasks in ETL pipeline are fully managed and run in containerized processes. Front-end Dash application is replicated and managed by a load balancer to handle users at scale. 
 
 ## Concerns
